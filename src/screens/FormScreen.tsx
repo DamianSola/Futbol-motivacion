@@ -18,11 +18,12 @@ const FormScreen = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const prompt = `Dame un análisis de jugador para ${name}, de ${age} años, que juega como ${position}. Máximo 150 caracteres.`;
+      const prompt = `Crear un discurso motivacional para ${name}, de ${age} años, previo a un partido de futbol. La posicion de ${name} es ${position}. Máximo 50 caracteres.`;
       const response = await generateContent(prompt);
       navigation.navigate('Result', { response });
     } catch (error) {
-      console.error(error);
+      console.error('Error al generar contenido:', error);
+    return 'Hubo un error generando el contenido.';
     } finally {
       setLoading(false);
     }
@@ -31,7 +32,7 @@ const FormScreen = () => {
   return (
     <View style={styles.container}>
         <Text style={styles.title}>A quien vas a motivar?</Text>
-    <ScrollView style={styles.formContainer}>
+    <ScrollView contentContainerStyle={styles.formContainer}>
       <Input 
         label="Nombre" 
         value={name} 
@@ -49,7 +50,7 @@ const FormScreen = () => {
         onChangeText={setPosition} 
         />
       <Button 
-        title={loading ? "Procesando..." : "Consultar"} 
+        title={loading ? "Generando discurso..." : "Generar discurso"} 
         onPress={handleSubmit}
         disabled={loading || !name || !age || !position}
         />
@@ -59,16 +60,17 @@ const FormScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container:{
-        backgroundColor: "#670000",
-        padding: 20,
-    },
-    title:{
-        color: "#fff",
-        fontSize: 24,
-        fontWeight: 'bold',
-        margin: "auto"
-    },
+  container:{
+    flex: 1,
+    backgroundColor: "#670000",
+    padding: 20,
+  },
+  title:{
+    color: "#fff",
+    fontSize: 24,
+    fontWeight: 'bold',
+    margin: "auto"
+  },
 
   formContainer: {
     flexGrow: 1,
