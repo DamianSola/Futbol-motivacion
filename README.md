@@ -31,11 +31,15 @@ La app utiliza el modelo de lenguaje **Gemini 1.5 Flash** mediante la dependenci
 
 | Pantalla de bienvenida | Pantalla de formulario | Resultado generado |
 |------------------------|------------------------|--------------------|
-| ![Jugador de fútbol bajo la lluvia](https://github.com/user-attachments/assets/b7c8cdf9-bea4-4ce3-a0bc-34cf052ddc48) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_0a4f78b3](https://github.com/user-attachments/assets/03cb4ed1-0fd2-4d9e-97ce-e2e7c5778e56) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a0e74b5b](https://github.com/user-attachments/assets/e32632a6-4530-42c6-b68c-e776989bb1e1) |
-| Resultado (continuación) | Frases guardadas |
-| ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_29f0f664](https://github.com/user-attachments/assets/d00c2ac0-106b-412c-8c44-a125ade46e53) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a52c636e](https://github.com/user-attachments/assets/d0d2726c-fbda-49cb-a773-3ca895acb85f) |
+| ![Imagen de WhatsApp 2025-05-23 a las 18 51 59_a31bd5c3](https://github.com/user-attachments/assets/41fd9e7b-6fb9-4a01-944c-9ac796474c9b) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_29f0f664](https://github.com/user-attachments/assets/8b891fbe-e486-47c0-90c7-039532df36d8) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a52c636e](https://github.com/user-attachments/assets/062fb1d7-e033-4136-b984-1228e4544cb0) |
+| Frases guardadas | 
+| ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a0e74b5b](https://github.com/user-attachments/assets/9a6d3bd0-50b9-4536-81a8-823d7b3d4390) | 
 
 ---
+![Imagen de WhatsApp 2025-05-23 a las 18 51 59_a31bd5c3](https://github.com/user-attachments/assets/41fd9e7b-6fb9-4a01-944c-9ac796474c9b)
+![Imagen de WhatsApp 2025-05-23 a las 18 51 58_29f0f664](https://github.com/user-attachments/assets/8b891fbe-e486-47c0-90c7-039532df36d8)
+![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a52c636e](https://github.com/user-attachments/assets/062fb1d7-e033-4136-b984-1228e4544cb0)
+![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a0e74b5b](https://github.com/user-attachments/assets/9a6d3bd0-50b9-4536-81a8-823d7b3d4390)
 
 ## 📦 Instalación
 
