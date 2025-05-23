@@ -57,7 +57,7 @@ const FormScreen = () => {
     </ScrollView>
     <TouchableOpacity 
           style ={styles.boton}
-          onPress={() => navigation.navigate('Form')}
+          onPress={() => navigation.navigate('Saved')}
         >
           <Text style={styles.startButtonText}>Discursos guardados 📁</Text>
         </TouchableOpacity>

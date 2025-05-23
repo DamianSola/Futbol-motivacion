@@ -4,6 +4,7 @@ import { Button } from '../components/Button';
 import { useNavigation, RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from '../types';
 import { StackNavigationProp } from '@react-navigation/stack';
+import {saveData} from '../Hooks/SavedFrases'
 
 type ResultScreenRouteProp = RouteProp<RootStackParamList, 'Result'>;
 
@@ -33,6 +34,16 @@ useEffect(() => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const { response } = route.params;
 
+  const handlePress = async() => {
+    try{
+      await saveData(response)
+      navigation.navigate('Home')
+
+    }catch(error){
+      console.log(error)
+    }
+  }
+
   return (
     <View style={styles.container}>
        <Image source={image} style={styles.image} />
@@ -46,7 +57,7 @@ useEffect(() => {
       />
      <TouchableOpacity 
                style ={styles.button}
-               onPress={() => navigation.navigate('Form')}
+               onPress={() => handlePress()}
              >
                <Text style={styles.startButtonText}>Guardar Frase</Text>
              </TouchableOpacity>

@@ -3,6 +3,7 @@ import { RootStackParamList } from '../types';
 import HomeScreen from '../screens/HomeScreen';
 import FormScreen from '../screens/FormScreen';
 import ResultScreen from '../screens/ResultScreen';
+import SavedScreen from '../screens/SavedScreen';
 import { MaterialIcons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 // importar screens
@@ -29,6 +30,10 @@ export const AppNavigator = () => {
         <Stack.Screen name="Result" component={ResultScreen} 
          options={{
           title: 'Frase generada',
+        }}/>
+        <Stack.Screen name="Saved" component={SavedScreen} 
+         options={{
+          title: 'Frases guardadas',
         }}/>
     </Stack.Navigator>
   );
