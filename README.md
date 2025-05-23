@@ -31,9 +31,9 @@ La app utiliza el modelo de lenguaje **Gemini 1.5 Flash** mediante la dependenci
 
 | Pantalla de bienvenida | Pantalla de formulario | Resultado generado |
 |------------------------|------------------------|--------------------|
-| ![Imagen de WhatsApp 2025-05-23 a las 18 51 59_a31bd5c3](https://github.com/user-attachments/assets/41fd9e7b-6fb9-4a01-944c-9ac796474c9b) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_29f0f664](https://github.com/user-attachments/assets/8b891fbe-e486-47c0-90c7-039532df36d8) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a0e74b5b](https://github.com/user-attachments/assets/9a6d3bd0-50b9-4536-81a8-823d7b3d4390)|
+| ![Imagen de WhatsApp 2025-05-23 a las 18 51 59_a31bd5c3](https://github.com/user-attachments/assets/41fd9e7b-6fb9-4a01-944c-9ac796474c9b) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_29f0f664](https://github.com/user-attachments/assets/8b891fbe-e486-47c0-90c7-039532df36d8) | ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a52c636e](https://github.com/user-attachments/assets/062fb1d7-e033-4136-b984-1228e4544cb0)|
 | Frases guardadas | 
-| ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a52c636e](https://github.com/user-attachments/assets/062fb1d7-e033-4136-b984-1228e4544cb0) | 
+| ![Imagen de WhatsApp 2025-05-23 a las 18 51 58_a0e74b5b](https://github.com/user-attachments/assets/9a6d3bd0-50b9-4536-81a8-823d7b3d4390) | 
 
 ---
 ![Imagen de WhatsApp 2025-05-23 a las 18 51 59_a31bd5c3](https://github.com/user-attachments/assets/41fd9e7b-6fb9-4a01-944c-9ac796474c9b)
