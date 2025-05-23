@@ -13,23 +13,27 @@ export const Button = ({ title, onPress, disabled = false }: Props) => {
       onPress={onPress}
       disabled={disabled}
     >
-      <Text style={styles.text}>{title}</Text>
+      <Text style={[styles.text, disabled && styles.disabled]}>{title}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#01055f',
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',
+        borderBottomColor: '#c0bebe',
+
   },
   disabled: {
-    backgroundColor: '#767575',
+    backgroundColor: '#c0bebe',
+    color: "#f7f4f4",
   },
   text: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: 600,
   },
 });

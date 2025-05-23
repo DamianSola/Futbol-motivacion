@@ -2,7 +2,7 @@ import 'dotenv/config';
 
 export default {
   expo: {
-    name: "futbol-motivacion",
+    name: "Futbol Motivacion",
     slug: "Futbol Motivacion",
     version: "1.0.0",
     orientation: "portrait",

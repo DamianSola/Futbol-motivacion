@@ -18,7 +18,7 @@ const FormScreen = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const prompt = `Crear un discurso motivacional para ${name}, de ${age} años, previo a un partido de futbol. La posicion de ${name} es ${position}. Máximo 50 caracteres.`;
+      const prompt = `Crear un discurso motivacional para ${name}, de ${age} años, previo a un partido de futbol. La posicion de ${name} es ${position}. Que sea epico!!. Máximo 100 caracteres.`;
       const response = await generateContent(prompt);
       navigation.navigate('Result', { response });
     } catch (error) {
