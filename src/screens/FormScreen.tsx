@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, StyleSheet, ScrollView, Text } from 'react-native';
+import { View, StyleSheet, ScrollView, Text, TouchableOpacity } from 'react-native';
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 import { useNavigation } from '@react-navigation/native';
@@ -18,7 +18,7 @@ const FormScreen = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const prompt = `Crear un discurso motivacional para ${name}, de ${age} años, previo a un partido de futbol. La posicion de ${name} es ${position}. Que sea epico!!. Máximo 100 caracteres.`;
+      const prompt = `Crear un discurso motivacional para ${name}, de ${age} años, previo a un partido de futbol. La posicion de ${name} es ${position}. Que sea epico!!. Máximo 100 caracteres.que sean arengas bien de vestuario, usar frases epicas de peliculas para motivar`;
       const response = await generateContent(prompt);
       navigation.navigate('Result', { response });
     } catch (error) {
@@ -55,6 +55,12 @@ const FormScreen = () => {
         disabled={loading || !name || !age || !position}
         />
     </ScrollView>
+    <TouchableOpacity 
+          style ={styles.boton}
+          onPress={() => navigation.navigate('Form')}
+        >
+          <Text style={styles.startButtonText}>Discursos guardados 📁</Text>
+        </TouchableOpacity>
         </View>
   );
 };
@@ -66,8 +72,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title:{
+    paddingTop: 20,
     color: "#fff",
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     margin: "auto"
   },
@@ -76,6 +83,24 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 10,
   },
+   boton:{
+    backgroundColor: '#01055f',
+    paddingVertical: 15,       
+    paddingHorizontal: 30,     
+    borderRadius: 20,          
+    elevation: 5,              
+    shadowColor: '#000',       
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    marginBottom: 40
+  },
+  startButtonText:{
+    color: '#FFFFFF', 
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  }
 });
 
 export default FormScreen;

@@ -13,7 +13,7 @@ export const Button = ({ title, onPress, disabled = false }: Props) => {
       onPress={onPress}
       disabled={disabled}
     >
-      <Text style={[styles.text, disabled && styles.disabled]}>{title}</Text>
+      <Text style={[styles.text, disabled && styles.disabledText]}>{title}</Text>
     </TouchableOpacity>
   );
 };
@@ -21,15 +21,18 @@ export const Button = ({ title, onPress, disabled = false }: Props) => {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: '#01055f',
-    padding: 15,
-    borderRadius: 5,
-    alignItems: 'center',
-        borderBottomColor: '#c0bebe',
-
+    padding: 10,
+    borderRadius: 20,
+    alignItems: 'center'
   },
   disabled: {
-    backgroundColor: '#c0bebe',
-    color: "#f7f4f4",
+    backgroundColor: 'transparent',
+    borderWidth: 2,
+    borderColor: '#c0bebe',
+
+  },
+  disabledText:{
+     color: "#c0bebe",
   },
   text: {
     color: 'white',

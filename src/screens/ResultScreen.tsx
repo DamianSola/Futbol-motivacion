@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { useState, useEffect } from 'react';
 import { Button } from '../components/Button';
 import { useNavigation, RouteProp } from '@react-navigation/native';
@@ -14,7 +14,10 @@ type Props = {
 const images = [
  {uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ61dh6Doi6FvpZViKYY-TlYMnIo2wx69S9g&s"},
  {uri: "https://cuidateplus.marca.com/sites/default/files/styles/natural/public/cms/concentracion-en-el-deporte.jpg.webp?itok=eUavq_m1"},
-{uri: "https://www.cultura.gob.ar/media/uploads/pareto-telam.jpg"}
+{uri: "https://i.pinimg.com/236x/2a/0a/d5/2a0ad54a5ae75820851f0cf55fbf58a4.jpg"},
+{uri: 'https://pbs.twimg.com/media/FjdrRfcXoAE4Fzw.jpg'},
+{uri: "https://www.mundodeportivo.com/us/files/image_449_465/uploads/2022/04/12/625618e6b2794.jpeg"},
+{uri: "https://estaticos-cdn.prensaiberica.es/clip/258fedbc-99e5-4dab-a7e2-afdbed1058d2_source-aspect-ratio_default_0.jpg"}
 ];
 
 
@@ -34,12 +37,20 @@ useEffect(() => {
     <View style={styles.container}>
        <Image source={image} style={styles.image} />
       <View style={styles.cardContainer}>
-      <Text style={styles.text}>{'"' + response + '"'}</Text>
+      <Text style={styles.text}>{response}</Text>
       </View>
+      <View style={styles.buttonContainer}>
       <Button 
-        title="Volver al inicio" 
+        title="Ir a Home" 
         onPress={() => navigation.navigate('Home')} 
       />
+     <TouchableOpacity 
+               style ={styles.button}
+               onPress={() => navigation.navigate('Form')}
+             >
+               <Text style={styles.startButtonText}>Guardar Frase</Text>
+             </TouchableOpacity>
+        </View>
     </View>
   );
 };
@@ -47,40 +58,65 @@ useEffect(() => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: '#670000'
+    paddingHorizontal: 24,
+    paddingVertical: 20,
+    backgroundColor: '#670000',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonContainer: {
+    flexDirection: 'row',  // Coloca los elementos en fila
+    justifyContent: 'space-between',  // Distribución equitativa
+    gap: 10,  // Espacio entre los botones
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#FFF',
+    textAlign: 'center',
   },
   cardContainer: {
-    backgroundColor: "#D32F2F", 
-    margin: 'auto',
-    padding: 20, 
-    borderRadius: 10, 
-    alignItems: "center", 
-    justifyContent: "center", 
-    shadowColor: "#000", 
-    shadowOffset: { width: 0, height: 4 }, 
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    elevation: 6, 
+    backgroundColor: "#D32F2F",
+    padding: 20,
+    borderRadius: 12,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
+    elevation: 8,
+    width: "90%",
+    marginBottom: 20
   },
   image: {
-    width: 350,
+    width: "90%",
     height: 250,
-    margin: "auto",
     resizeMode: "cover",
-    borderRadius: 10,
+    borderRadius: 12,
+    marginBottom: 20,
   },
-   text: {
-    color: "#FFF", 
-    fontSize: 18, 
-    fontWeight: "bold", 
+  text: {
+    color: "#FFF",
+    fontSize: 22,
+    fontWeight: "bold",
     textAlign: "center",
+    marginVertical: 10,
+  },
+  startButtonText:{
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 18,
+  },
+  button:{
+    borderWidth: 3,
+    padding: 10,
+    borderRadius: 10,
+    borderColor: 'white',
+    backgroundColor: "transparent",
+    alignItems: "center"
   }
-
 });
+
 export default ResultScreen;

@@ -18,9 +18,3 @@ export const AppNavigator = () => {
     </Stack.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "red",
-  }
-})
